@@ -65,7 +65,7 @@ const dialogueData = {
     calendar: "",
   };
 
-k.loadSprite("yuki", "assets/yuki-sheet.png", {
+k.loadSprite("yuki", "./yuki-sheet.png", {
     sliceX: 4,
     sliceY: 4,
     anims: {
@@ -78,12 +78,12 @@ k.loadSprite("yuki", "assets/yuki-sheet.png", {
     }
 });
 
-k.loadSprite("map", "assets/map.png");
+k.loadSprite("map", "./map.png");
 
 k.setBackground(k.Color.fromHex("#171717"));
 
 k.scene("main", async () => {
-    const mapData = await (await fetch("assets/map.json")).json();
+    const mapData = await (await fetch("./map.json")).json();
     const layers = mapData.layers;
   
     const map = k.add([
